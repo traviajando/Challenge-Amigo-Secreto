@@ -17,9 +17,15 @@ function agregarAmigo(){
 function renderizarAmigos(){
     let listaAmigos = document.getElementById("listaAmigos");
     listaAmigos.innerHTML = "";
-    amigo.forEach((amigo, index) => {
+   
+    for(let i = 0; i < amigo.length; i++){
         let item = document.createElement("li");
-        item.textContent = `${index + 1} - ${amigo}`;
+        item.textContent = amigo[i];
         listaAmigos.appendChild(item);
-    });
+
+    }
 }
+ //amigo.forEach((amigo, index) => {
+    //    let item = document.createElement("li");
+    //     item.textContent = `${index + 1} - ${amigo}`;
+    //    listaAmigos.appendChild(item);
