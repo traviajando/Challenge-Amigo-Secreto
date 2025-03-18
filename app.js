@@ -13,3 +13,13 @@ function agregarAmigo(){
    inputAmigo.value = "";
    inputAmigo.focus();
 }
+
+function renderizarAmigos(){
+    let listaAmigos = document.getElementById("listaAmigos");
+    listaAmigos.innerHTML = "";
+    amigo.forEach((amigo, index) => {
+        let item = document.createElement("li");
+        item.textContent = `${index + 1} - ${amigo}`;
+        listaAmigos.appendChild(item);
+    });
+}
